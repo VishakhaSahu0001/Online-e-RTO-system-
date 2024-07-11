@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RTADataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ApplyTbl">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="gender" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="mobile" />
+      <PropertyRef Name="dob" />
+      <PropertyRef Name="vehicalType" />
+      <PropertyRef Name="description" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="dob" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="vehicalType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChallenTbl">
+    <Key>
+      <PropertyRef Name="challenNo" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="licenceNo" />
+      <PropertyRef Name="platNo" />
+      <PropertyRef Name="amount" />
+    </Key>
+    <Property Name="challenNo" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="licenceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="platNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RegisterTbl">
+    <Key>
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="gender" />
+      <PropertyRef Name="mobile" />
+      <PropertyRef Name="email" />
+      <PropertyRef Name="pass" />
+    </Key>
+    <Property Name="firstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="RTADataEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ApplyTbls" EntityType="Self.ApplyTbl" />
+    <EntitySet Name="ChallenTbls" EntityType="Self.ChallenTbl" />
+    <EntitySet Name="RegisterTbls" EntityType="Self.RegisterTbl" />
+  </EntityContainer>
+</Schema>

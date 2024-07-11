@@ -1,0 +1,43 @@
+﻿@model  RTAInformationSystem.Models.RegisterTbl
+@{
+    ViewBag.Title = "Login";
+}
+
+<center>
+    @using (Html.BeginForm("Login", "Home"))
+    {
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <table borger="1" backColor="Blue">
+            <tr>
+                <td align="center" colspan="2">LogIn</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.email)</td>
+                <td>@Html.TextBoxFor(m => m.email)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.pass)</td>
+                <td>@Html.TextBoxFor(m => m.pass)</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="Submit" class="btn" value="Login" /><spla>&nbsp;</spla>
+                    <input type="Submit" class="btn" value="SignUp" id="btnSignUp" />
+
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    }
+</center>
+

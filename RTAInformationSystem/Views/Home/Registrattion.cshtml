@@ -1,0 +1,72 @@
+﻿@model  RTAInformationSystem.Models.RegisterTbl
+@{
+    ViewBag.Title = "Registrattion";
+}
+
+<center>
+    @using (Html.BeginForm("Registration", "Home", FormMethod.Post))
+    {
+
+    <table style="width: 448px; height: 440px; background-color: #0094ff; font-size: large; font-weight: bold;">
+        <th colspan="2" align="center"><h1>Registrtaion</h1> </th>
+
+
+        <tr>
+            <td align="center">Name</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.firstName)
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">Mobile</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.lastName)
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">Gender</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.gender)
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">Mobile</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.mobile)
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">email</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.email)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Password</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.pass)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Confirn Password</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.pass)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Submit">
+
+            </td>
+        </tr>
+    </table>
+    }
+    </center>
+
+
+
+

@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RTADataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\RTAINFORMATIONSYSTEM\RTAINFORMATIONSYSTEM\APP_DATA\RTADATA.MDF.dbo.ApplyTbl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ApplyTbl">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="gender" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="dob" />
+            <PropertyRef Name="vehicalType" />
+            <PropertyRef Name="description" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mobile" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="dob" Type="datetime" Nullable="false" />
+          <Property Name="vehicalType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="description" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\RTAINFORMATIONSYSTEM\RTAINFORMATIONSYSTEM\APP_DATA\RTADATA.MDF.dbo.ChallenTbl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ChallenTbl">
+          <Key>
+            <PropertyRef Name="challenNo" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="licenceNo" />
+            <PropertyRef Name="platNo" />
+            <PropertyRef Name="amount" />
+          </Key>
+          <Property Name="challenNo" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="licenceNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="platNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="amount" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'F:\ASP.NET\RTAINFORMATIONSYSTEM\RTAINFORMATIONSYSTEM\APP_DATA\RTADATA.MDF.dbo.RegisterTbl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="RegisterTbl">
+          <Key>
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="gender" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="pass" />
+          </Key>
+          <Property Name="firstName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="mobile" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="pass" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="RTADataModelStoreContainer">
+          <EntitySet Name="ApplyTbl" EntityType="Self.ApplyTbl" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[ApplyTbl].[name] AS [name], 
+[ApplyTbl].[gender] AS [gender], 
+[ApplyTbl].[email] AS [email], 
+[ApplyTbl].[mobile] AS [mobile], 
+[ApplyTbl].[dob] AS [dob], 
+[ApplyTbl].[vehicalType] AS [vehicalType], 
+[ApplyTbl].[description] AS [description]
+FROM [dbo].[ApplyTbl] AS [ApplyTbl]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ChallenTbl" EntityType="Self.ChallenTbl" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[ChallenTbl].[challenNo] AS [challenNo], 
+[ChallenTbl].[name] AS [name], 
+[ChallenTbl].[licenceNo] AS [licenceNo], 
+[ChallenTbl].[platNo] AS [platNo], 
+[ChallenTbl].[amount] AS [amount]
+FROM [dbo].[ChallenTbl] AS [ChallenTbl]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="RegisterTbl" EntityType="Self.RegisterTbl" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[RegisterTbl].[firstName] AS [firstName], 
+[RegisterTbl].[lastName] AS [lastName], 
+[RegisterTbl].[gender] AS [gender], 
+[RegisterTbl].[mobile] AS [mobile], 
+[RegisterTbl].[email] AS [email], 
+[RegisterTbl].[pass] AS [pass]
+FROM [dbo].[RegisterTbl] AS [RegisterTbl]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RTADataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ApplyTbl">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="gender" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="dob" />
+            <PropertyRef Name="vehicalType" />
+            <PropertyRef Name="description" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="dob" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="vehicalType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChallenTbl">
+          <Key>
+            <PropertyRef Name="challenNo" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="licenceNo" />
+            <PropertyRef Name="platNo" />
+            <PropertyRef Name="amount" />
+          </Key>
+          <Property Name="challenNo" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="licenceNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="platNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RegisterTbl">
+          <Key>
+            <PropertyRef Name="firstName" />
+            <PropertyRef Name="lastName" />
+            <PropertyRef Name="gender" />
+            <PropertyRef Name="mobile" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="pass" />
+          </Key>
+          <Property Name="firstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobile" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pass" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="RTADataEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ApplyTbls" EntityType="Self.ApplyTbl" />
+          <EntitySet Name="ChallenTbls" EntityType="Self.ChallenTbl" />
+          <EntitySet Name="RegisterTbls" EntityType="Self.RegisterTbl" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RTADataModelStoreContainer" CdmEntityContainer="RTADataEntities">
+          <EntitySetMapping Name="ApplyTbls">
+            <EntityTypeMapping TypeName="RTADataModel.ApplyTbl">
+              <MappingFragment StoreEntitySet="ApplyTbl">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="dob" ColumnName="dob" />
+                <ScalarProperty Name="vehicalType" ColumnName="vehicalType" />
+                <ScalarProperty Name="description" ColumnName="description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChallenTbls">
+            <EntityTypeMapping TypeName="RTADataModel.ChallenTbl">
+              <MappingFragment StoreEntitySet="ChallenTbl">
+                <ScalarProperty Name="challenNo" ColumnName="challenNo" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="licenceNo" ColumnName="licenceNo" />
+                <ScalarProperty Name="platNo" ColumnName="platNo" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegisterTbls">
+            <EntityTypeMapping TypeName="RTADataModel.RegisterTbl">
+              <MappingFragment StoreEntitySet="RegisterTbl">
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

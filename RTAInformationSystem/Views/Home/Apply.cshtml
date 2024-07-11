@@ -1,0 +1,72 @@
+﻿@model  RTAInformationSystem.Models.ApplyTbl
+@{
+    ViewBag.Title = "Apply";
+}
+
+
+<center>
+    @using (Html.BeginForm("Apply", "Home", FormMethod.Post))
+    {
+
+    <table style="width: 448px; height: 440px; background-color: #0094ff; font-size: large; font-weight: bold;">
+        <th colspan="2" align="center"><h1>Apply Form</h1> </th>
+
+
+        <tr>
+            <td align="center">Full Name</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.name)
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">Gender</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.gender)
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">Email Id</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.email)
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">Mobile</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.mobile)
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">Date Of Birth</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.dob)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Licence Type</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.vehicalType)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">Description</td>
+            <td align="center">
+                @Html.TextBoxFor(m => m.description)
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Request">
+
+            </td>
+        </tr>
+    </table>
+    }
+</center>
+
+

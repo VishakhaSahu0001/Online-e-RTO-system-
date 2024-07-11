@@ -1,0 +1,60 @@
+﻿@model  RTAInformationSystem.Models.ChallenTbl
+@{
+    ViewBag.Title = "Challen";
+}
+
+<center>
+    @using (Html.BeginForm("Challen", "Home", FormMethod.Post))
+    {
+
+        <table style="width: 448px; height: 440px; background-color: #0094ff; font-size: large; font-weight: bold;">
+            <th colspan="2" align="center"><img src="images/snup2.png" id="" width="100px" style="height: 40px" /> </th>
+
+
+            <tr>
+                <td align="center">Challen No.</td>
+                <td align="center">
+                    @Html.TextBoxFor(m =>m.challenNo)
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Your Name</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.name)
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">License No.</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.licenceNo)
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Plate No.</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.platNo)
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">Challen Amount</td>
+                <td align="center">
+                    @Html.TextBoxFor(m => m.amount)
+                </td>
+            </tr>
+           
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Submit">
+
+                </td>
+            </tr>
+        </table>
+    }
+</center>
+
+
+

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RTADataModelStoreContainer" CdmEntityContainer="RTADataEntities">
+    <EntitySetMapping Name="ApplyTbls">
+      <EntityTypeMapping TypeName="RTADataModel.ApplyTbl">
+        <MappingFragment StoreEntitySet="ApplyTbl">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="vehicalType" ColumnName="vehicalType" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChallenTbls">
+      <EntityTypeMapping TypeName="RTADataModel.ChallenTbl">
+        <MappingFragment StoreEntitySet="ChallenTbl">
+          <ScalarProperty Name="challenNo" ColumnName="challenNo" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="licenceNo" ColumnName="licenceNo" />
+          <ScalarProperty Name="platNo" ColumnName="platNo" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegisterTbls">
+      <EntityTypeMapping TypeName="RTADataModel.RegisterTbl">
+        <MappingFragment StoreEntitySet="RegisterTbl">
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
